@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>To Do List</title>
-</head>
+<%- include("header"); -%>
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
+    </div>
 
-<body>
-    
-    <h1> <%= kindOfDay %> </h1>
+    <div class="box">
 
-    <ul>
         <% for(var i = 0; i< newListItems.length ; i++ ){ %>
-            <li><%= newListItems[i] %></li>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= newListItems[i] %></p>
+            </div>
         <% } %>
-             <!-- this will add the newitem in the new li tag rather tag in the same li tag -->
+             <!-- this will add the newitem in the new p tag rather tag in the same p tag -->
 
-    </ul>
-
-    <form class="" action="/" method="post">
-
-        <input type="text" name="newItem" id="">
-
-        <button type="submit" name="button">Add</button>
-    </form>
-
-</body>
-</html>
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+<%- include("footer"); -%>
+   
