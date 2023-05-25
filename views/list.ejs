@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+</head>
+
+<body>
+    
+    <h1> <%= kindOfDay %> </h1>
+
+    <ul>
+        <% for(var i = 0; i< newListItems.length ; i++ ){ %>
+            <li><%= newListItems[i] %></li>
+        <% } %>
+             <!-- this will add the newitem in the new li tag rather tag in the same li tag -->
+
+    </ul>
+
+    <form class="" action="/" method="post">
+
+        <input type="text" name="newItem" id="">
+
+        <button type="submit" name="button">Add</button>
+    </form>
+
+</body>
+</html>
